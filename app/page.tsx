@@ -32,9 +32,12 @@ const page = () => {
               type="submit"
               className="py-2 px-4 rounded-lg border bg-blue-500 text-white"
               onClick={() => {
-                console.log("checking user", user, "checking state,", state);
-                setUser(state);
-                localStorage.setItem("user", JSON.stringify(state));
+                if (state !== "") {
+                  setUser(state);
+                  localStorage.setItem("user", JSON.stringify(state));
+
+                  navigate.push("/1");
+                }
               }}
             >
               Submit

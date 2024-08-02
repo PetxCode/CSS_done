@@ -31,7 +31,7 @@ const page = () => {
           showPath={showPath}
         />
 
-        <div className="min-h-[500px] order-1 lg:order-2 col-span-1 lg:col-span-3 p-4">
+        <div className="min-h-[500px] order-1 lg:order-2 col-span-1 lg:col-span-4 p-4">
           <DisplayPart value={entry} />
         </div>
       </div>
