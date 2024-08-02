@@ -65,15 +65,17 @@ export const QuestionPart: FC<iProps> = ({
     }
   };
 
+  let name: string = "";
   useEffect(() => {
+    name = JSON.parse(localStorage?.getItem("user")!);
     check();
   }, [text]);
 
-  const name = JSON.parse(localStorage?.getItem("user")!);
+  console.log(name);
 
   return (
     <div
-      className="order-2 lg:order-1 col-span-1 lg:col-span-3 bg-[#e38e6c]
+      className="order-2 rounded-b-md lg:rounded-l-md  lg:order-1 col-span-1 lg:col-span-3 bg-[#e38e6c]
     py-4 px-8 h-full flex flex-col"
     >
       <section className="flex w-full justify-between">
@@ -85,9 +87,7 @@ export const QuestionPart: FC<iProps> = ({
           level {showPath!}
         </p>
       </section>
-
       {/* Working section */}
-
       <section className="flex flex-col-reverse lg:flex-col ">
         <main>
           <section>
@@ -165,11 +165,8 @@ export const QuestionPart: FC<iProps> = ({
           </div>
         </section>
       </section>
-
       {/* Footer */}
-
       <div className="flex-1" />
-
       <div className="flex flex-col w-full justify-center items-center text-[12px]">
         <p className="tracking-wide">
           CSS-Flex Mastery, created by set08 for CodeLab Set10

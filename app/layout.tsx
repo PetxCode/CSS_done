@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="p-1 m-2 flex justify-center transition-all duration-300 ">
           <Provider>
-            <main className="bg-[slate-100] rounded-md h-full w-full lg:w-full xl:w-[80%] border">
+            <main className="bg-[slate-100] rounded-md h-full w-full lg:w-full xl:w-[80%] border overflow-hidden">
               <LoaderSpin children={children} />
             </main>
           </Provider>
