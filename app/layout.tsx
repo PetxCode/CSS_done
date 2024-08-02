@@ -17,16 +17,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <Provider>
-      <html lang="en">
-        <body className={inter.className}>
-          <div className="p-1 m-2 flex justify-center transition-all duration-300 ">
+    <html lang="en">
+      <body className={inter.className}>
+        <div className="p-1 m-2 flex justify-center transition-all duration-300 ">
+          <Provider>
             <main className="bg-[slate-100] rounded-md h-full w-full lg:w-full xl:w-[80%] border">
               <LoaderSpin children={children} />
             </main>
-          </div>
-        </body>
-      </html>
-    </Provider>
+          </Provider>
+        </div>
+      </body>
+    </html>
   );
 }

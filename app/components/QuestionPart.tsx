@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import {
   Dispatch,
@@ -67,6 +69,8 @@ export const QuestionPart: FC<iProps> = ({
     check();
   }, [text]);
 
+  const name = JSON.parse(localStorage?.getItem("user")!);
+
   return (
     <div
       className="order-2 lg:order-1 col-span-1 lg:col-span-3 bg-[#e38e6c]
@@ -75,7 +79,7 @@ export const QuestionPart: FC<iProps> = ({
       <section className="flex w-full justify-between">
         <div>
           <p className="font-bold text-[18px]">CSS-Flex Mastery </p>
-          <p>{JSON.parse(localStorage.getItem("user")!)}</p>
+          <p>{name}</p>
         </div>
         <p className="bg-orange-50 h-[35px] text-[16px] w-[100px] rounded-sm flex justify-center items-center">
           level {showPath!}
