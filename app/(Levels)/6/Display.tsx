@@ -8,7 +8,7 @@ export const Display: FC<iProps> = ({ value }) => {
   const data = Array.from({ length: 1 });
 
   return (
-    <main className="w-full bg-red-50 h-[95vh] relative rounded-md">
+    <main className="w-full h-[95vh] relative rounded-md">
       <div className="h-8 px-10 text-[#E38E6C] text-[20px] uppercase">
         {value && "Great Work"}
       </div>

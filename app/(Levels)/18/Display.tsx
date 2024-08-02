@@ -55,7 +55,7 @@ export const Display: FC<iProps> = ({ value }) => {
   ];
 
   return (
-    <main className="w-full bg-red-50 h-[95vh] relative">
+    <main className="w-full h-[95vh] relative">
       <div className="h-8 px-10 text-[#E38E6C] text-[20px] uppercase">
         {value && "Great Work"}
       </div>
