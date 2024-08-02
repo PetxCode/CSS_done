@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: rgb(240, 240, 240);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(69, 69, 69);
+  border-radius: 10px;
+  border: 3px solid rgb(225, 225, 225);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(225, 225, 225);
+
+  border: 4px solid transparent;
+  background-clip: content-box;
+}
+
+.backimg {
+  background-image: url(../public/squirell-removebg-preview.png);
+  background-position: center;
+  background-size: cover;
+}
+.backtree {
+  background-image: url(../public/tree-removebg-preview.png);
+  background-position: center;
+  background-size: contain;
+}
+
+.backimg1 {
+  background-image: url(../public/squirell1.png);
+  background-position: center;
+  background-size: cover;
+}
+.backtree1 {
+  background-image: url(../public/tree-removebg1.png);
+  background-position: center;
+  background-size: contain;
+}
