@@ -57,7 +57,7 @@
     "id": 10,
     "question": "Help the squirrels get to their own burrows. Although they seem close, it will take both flex-direction and justify-content to get them there.",
     "insight": "Notice that when you set the direction to a reversed row or column, start and end are also reversed.",
-    "answer": "flex-direction: row-reverse; justify-content: flex-end;"
+    "answer": "flex-direction: column; justify-content: flex-end;"
   },
   {
     "id": 11,
