@@ -10,6 +10,7 @@ import {
   useState,
 } from "react";
 import { Context } from "../global/provider";
+import { useSelector } from "react-redux";
 
 interface iProps {
   log?: boolean;
@@ -34,6 +35,8 @@ export const QuestionPart: FC<iProps> = ({
 }) => {
   const { entry, setEntry } = useContext(Context);
   const [value, setValue] = useState<boolean>(false);
+
+  const userName = useSelector((state: any) => state.userName);
 
   const readValue = (a: string, b: string) => {
     // Remove extra spaces and split by semicolon to get individual properties
@@ -71,8 +74,6 @@ export const QuestionPart: FC<iProps> = ({
     check();
   }, [text]);
 
-  console.log(name);
-
   return (
     <div
       className="order-2 rounded-b-md lg:rounded-l-md  lg:order-1 col-span-1 lg:col-span-3 bg-[#e38e6c]
@@ -81,7 +82,7 @@ export const QuestionPart: FC<iProps> = ({
       <section className="flex w-full justify-between">
         <div>
           <p className="font-bold text-[18px]">CSS-Flex Mastery </p>
-          <p>{name}</p>
+          <p>{userName}</p>
         </div>
         <p className="bg-orange-50 h-[35px] text-[16px] w-[100px] rounded-sm flex justify-center items-center">
           level {showPath!}

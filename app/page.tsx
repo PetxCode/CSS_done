@@ -1,11 +1,12 @@
 "use client";
 
-import React, { useContext, useState } from "react";
-import { Context } from "./global/provider";
+import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { createUserName } from "./global/redux";
 
 const page = () => {
-  const { user, setUser } = useContext(Context);
+  const dispatch = useDispatch();
   const [state, setState] = useState("");
   const navigate = useRouter();
   return (
@@ -33,8 +34,7 @@ const page = () => {
               className="py-2 px-4 rounded-lg border bg-blue-500 text-white"
               onClick={() => {
                 if (state !== "") {
-                  setUser(state);
-                  localStorage.setItem("user", JSON.stringify(state));
+                  dispatch(createUserName(state));
 
                   navigate.push("/1");
                 }
