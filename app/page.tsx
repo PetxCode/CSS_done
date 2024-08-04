@@ -1,10 +1,11 @@
 "use client";
+
 import { MdPermContactCalendar } from "react-icons/md";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { createUserName } from "./global/redux";
-import { Loader, Play, TriangleAlert } from "lucide-react";
+import { Loader } from "lucide-react";
 
 const page = () => {
   const dispatch = useDispatch();
