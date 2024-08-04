@@ -4,10 +4,13 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { createUserName } from "./global/redux";
+import { Loader, Play, TriangleAlert } from "lucide-react";
 
 const page = () => {
   const dispatch = useDispatch();
-  const [state, setState] = useState("");
+  const [state, setState] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+
   const navigate = useRouter();
   return (
     <div className="h-[calc(100vh-30px)] w-[100%] bg-slate-300 flex flex-col justify-center items-center">
@@ -41,15 +44,24 @@ const page = () => {
           <button
             type="submit"
             className="py-3 px-20 rounded-lg border  bg-blue-950 text-white"
+            disabled={loading}
             onClick={() => {
               if (state !== "") {
+                setLoading(true);
                 dispatch(createUserName(state));
 
                 navigate.push("/1");
               }
             }}
           >
-            Let's Go
+            {loading ? (
+              <div className="flex items-center">
+                <Loader className="w-4 h-4 mr-2 mb-1 animate-spin" />
+                <span>Loading...</span>
+              </div>
+            ) : (
+              "Let's Go"
+            )}
           </button>
         </div>
       </div>
