@@ -76,7 +76,7 @@ export const QuestionPart: FC<iProps> = ({
 
   return (
     <div
-      className="order-2 rounded-b-md lg:rounded-l-md  lg:order-1 col-span-1 lg:col-span-3 bg-[#e38e6c]
+      className="order-2 rounded-b-md lg:rounded-l-md  lg:order-1 col-span-1 lg:col-span-3 bg-slate-300
     py-4 px-8 h-full flex flex-col"
     >
       <section className="flex w-full justify-between">
@@ -169,10 +169,10 @@ export const QuestionPart: FC<iProps> = ({
       {/* Footer */}
       <div className="flex-1" />
       <div className="flex flex-col w-full justify-center items-center text-[12px]">
-        <p className="tracking-wide">
+        <p className="tracking-wide text-center">
           CSS-Flex Mastery, created by set08 for CodeLab Set10
         </p>
-        <div className="text-[10pxr]  font-semibold">
+        <div className="text-[10pxr]  font-semibold text-center">
           GitHub • Twitter • LinkedIN
         </div>
       </div>
