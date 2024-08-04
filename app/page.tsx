@@ -14,7 +14,7 @@ const page = () => {
       <div className="w-full pt-[20px] flex flex-col items-center">
         <h1 className="text-[30px] font-bold">Welcome to Flex Squirelly</h1>
         <div className="w-full flex justify-center">
-          <p className=" font-thin tracking-widest mt-5 w-[90%] md:w-[500px] text-center">
+          <p className=" font-normal tracking-widest mt-5 w-[90%] md:w-[500px] text-center">
             This is a very simple Game that explore the possibility of you
             Mastering <strong>CSS-FLEX</strong> in a fun and simple way!
           </p>
