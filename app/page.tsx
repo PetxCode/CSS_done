@@ -28,7 +28,9 @@ const page = () => {
       <Particles className="absolute inset-0 pointer-events-none" />
 
       <div className="w-full pt-[20px] flex flex-col items-center">
-        <h1 className="text-[30px] font-bold">Welcome to Flex Squirelly</h1>
+        <h1 className="text-[30px] font-bold text-center flex w-full justify-center leading-tight">
+          Welcome to Flex Squirelly
+        </h1>
         <div className="w-full flex justify-center">
           <p className=" font-normal tracking-widest mt-5 w-[90%] md:w-[500px] text-center">
             This is a very simple Game that explore the possibility of you
@@ -78,7 +80,6 @@ const page = () => {
           </button>
         </div>
       </div>
-      <div className="w-full">{/* <Particlesdemo /> */}</div>
     </div>
   );
 };
