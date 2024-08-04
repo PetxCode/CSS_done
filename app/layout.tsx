@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Provider from "./global/provider";
 import LoaderSpin from "./components/LoaderSpin";
 import ReduxProvider from "./global/ReduxProvider";
 
 const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ subsets: ["latin"], weight: "300" });
 
 export const metadata: Metadata = {
   title: "Create Next App",

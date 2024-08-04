@@ -92,7 +92,7 @@ export const QuestionPart: FC<iProps> = ({
       <section className="flex flex-col-reverse lg:flex-col ">
         <main>
           <section>
-            <p className="font-light my-10 tracking-widest text-[16px]">
+            <p className="font-light my-10 tracking-[0.15rem] text-[16px]">
               {question}
             </p>
           </section>
