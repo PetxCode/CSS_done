@@ -6,6 +6,9 @@ import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { createUserName } from "./global/redux";
 import { Loader } from "lucide-react";
+import Particles from "./utils/Particles";
+import bgPix from "./../public/hero.jpg";
+import Image from "next/image";
 
 const page = () => {
   const dispatch = useDispatch();
@@ -14,7 +17,16 @@ const page = () => {
 
   const navigate = useRouter();
   return (
-    <div className="h-[calc(100vh-30px)] w-[100%] bg-slate-300 flex flex-col justify-center items-center">
+    <div className="h-[calc(100vh-30px)] w-[100%] flex flex-col justify-center items-center relative bg-[url('./../public/hero.jpg')] bg-cover bg-center">
+      <Image
+        width={1000}
+        height={1000}
+        alt=""
+        src={bgPix}
+        className="w-full h-full -z-10 object-cover absolute top-0 left-0"
+      />
+      <Particles className="absolute inset-0 pointer-events-none" />
+
       <div className="w-full pt-[20px] flex flex-col items-center">
         <h1 className="text-[30px] font-bold">Welcome to Flex Squirelly</h1>
         <div className="w-full flex justify-center">
@@ -66,6 +78,7 @@ const page = () => {
           </button>
         </div>
       </div>
+      <div className="w-full">{/* <Particlesdemo /> */}</div>
     </div>
   );
 };
