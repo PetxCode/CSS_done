@@ -45,6 +45,7 @@ export const QuestionPart: FC<iProps> = ({
       ?.map((prop) => prop.trim())
       ?.filter(Boolean)
       ?.sort();
+
     let answerValue = b
       ?.split(";")
       ?.map((prop) => prop.trim())
@@ -113,8 +114,8 @@ export const QuestionPart: FC<iProps> = ({
             ) : (
               <div className="ml-0 mt-3">
                 <textarea
-                  className="p-2 outline-none bg-white border rounded-md w-full h-[100px] resize-none my-2 "
-                  value={text}
+                  className="p-2 outline-none bg-white border rounded-md w-full h-[100px] resize-none my-2 lowercase"
+                  value={text?.toLocaleLowerCase()}
                   onChange={(e) => {
                     setText!(e.target.value);
                   }}
